@@ -1,0 +1,110 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SSH_USER:   ${{ secrets.USERNAME }}
+      SSH_HOST:   ${{ secrets.HOST }}
+      SSH_PORT:   10022
+      REMOTE_DIR: /home/suzushige/qilin-electric.com/public_html/wp-content/themes/qilin-electric
+
+    steps:
+      # --- 1. ソース取得 ---
+      - uses: actions/checkout@v4
+
+      # --- 2. 秘密鍵のセットアップ ---
+      - name: Setup SSH key
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+
+          echo "🔑 Writing private key..."
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+
+          # LFに統一
+          tr -d '\r' < ~/.ssh/id_deploy > ~/.ssh/id_clean
+          mv ~/.ssh/id_clean ~/.ssh/id_deploy
+
+          chmod 600 ~/.ssh/id_deploy
+
+          echo "🔐 Starting ssh-agent"
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_deploy
+
+          echo "📄 Creating SSH config"
+          cat > ~/.ssh/config <<EOF
+          Host deploy-server
+            HostName $SSH_HOST
+            Port $SSH_PORT
+            User $SSH_USER
+            IdentityFile ~/.ssh/id_deploy
+            IdentitiesOnly yes
+            StrictHostKeyChecking no
+          EOF
+
+          chmod 600 ~/.ssh/config
+
+      # --- 3. known_hosts 登録 ---
+      - name: Add Server host key
+        run: |
+          echo "🔍 Fetching host key..."
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      # --- 4. SSH キーの指紋確認 ---
+      - name: Show private key fingerprint
+        run: |
+          echo "===== Local private key fingerprint ====="
+          ssh-keygen -lf ~/.ssh/id_deploy || echo "no key found"
+          echo "========================================"
+
+      # --- 5. SSH 設定内容の表示 ---
+      - name: Show SSH config
+        run: |
+          echo "===== ~/.ssh/config ====="
+          cat ~/.ssh/config
+          echo "=========================="
+
+      # --- 6. SSH 接続テスト（超詳細ログ） ---
+      - name: Test SSH connection (verbose)
+        run: |
+          echo "===== SSH -vvv TEST START ====="
+          ssh -vvv deploy-server "echo 'SSH OK on $(hostname) at $(date)'"
+          echo "===== SSH -vvv TEST END ====="
+
+      # --- 7. ★ 本番デプロイ ★ ---
+      - name: Deploy on remote host
+        run: |
+          set -euo pipefail
+          ssh deploy-server << 'EOF'
+            set -e
+            DEPLOY_DIR="/home/suzushige/qilin-electric.com/public_html/wp-content/themes/qilin-electric"
+
+            echo "📁 Checking directory..."
+            if [ ! -d "$DEPLOY_DIR" ]; then
+              echo "Creating $DEPLOY_DIR"
+              mkdir -p "$DEPLOY_DIR"
+            fi
+
+            echo "📂 Moving into directory"
+            cd "$DEPLOY_DIR"
+
+            if [ ! -d ".git" ]; then
+              echo "🌱 Initial clone"
+              cd ..
+              rm -rf qilin-electric
+              git clone https://github.com/suzushige910/qilin-electric.git qilin-electric
+              cd qilin-electric
+            else
+              echo "🔄 Updating repository"
+              git fetch origin
+              git reset --hard origin/main
+            fi
+
+            echo "🎉 Deployment completed at $(date)"
+          EOF
