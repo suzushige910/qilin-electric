@@ -24,8 +24,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #3d3d3d;
+    background-color: #EBD5AB;
 }
 
 img {
@@ -35,13 +35,13 @@ img {
 }
 
 a {
-    color: #0066cc;
+    color: #628141;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #004499;
+    color: #8BAE66;
 }
 
 /* ========================================
@@ -60,7 +60,7 @@ a:hover {
 
 .site-header {
     background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 2px solid #628141;
     padding: 20px 0;
 }
 
@@ -77,7 +77,7 @@ a:hover {
 }
 
 .site-title a {
-    color: #333;
+    color: #628141;
 }
 
 .site-description {
@@ -103,14 +103,14 @@ a:hover {
 }
 
 .main-navigation a {
-    color: #333;
+    color: #628141;
     font-weight: 500;
     padding: 5px 0;
     display: block;
 }
 
 .main-navigation a:hover {
-    color: #0066cc;
+    color: #E67E22;
 }
 
 /* ========================================
@@ -131,7 +131,7 @@ a:hover {
 .post {
     margin-bottom: 40px;
     padding-bottom: 40px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #8BAE66;
 }
 
 .post:last-child {
@@ -150,11 +150,11 @@ a:hover {
 }
 
 .entry-title a {
-    color: #333;
+    color: #628141;
 }
 
 .entry-title a:hover {
-    color: #0066cc;
+    color: #E67E22;
 }
 
 .entry-meta {
@@ -193,14 +193,14 @@ a:hover {
     display: inline-block;
     padding: 8px 15px;
     margin: 0 5px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #8BAE66;
     border-radius: 3px;
 }
 
 .pagination .current {
-    background-color: #0066cc;
+    background-color: #628141;
     color: #fff;
-    border-color: #0066cc;
+    border-color: #628141;
 }
 
 /* ========================================
@@ -208,8 +208,8 @@ a:hover {
 ======================================== */
 
 .site-footer {
-    background-color: #f5f5f5;
-    border-top: 1px solid #e0e0e0;
+    background-color: #628141;
+    border-top: 2px solid #8BAE66;
     padding: 30px 0;
     margin-top: 40px;
 }
@@ -217,7 +217,15 @@ a:hover {
 .site-info {
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: #EBD5AB;
+}
+
+.site-info a {
+    color: #EBD5AB;
+}
+
+.site-info a:hover {
+    color: #E67E22;
 }
 
 /* ========================================
