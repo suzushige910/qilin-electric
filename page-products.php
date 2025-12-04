@@ -46,13 +46,8 @@ get_header();
                 $residential_products = new WP_Query(array(
                     'post_type' => 'product',
                     'posts_per_page' => -1,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'product_category',
-                            'field' => 'slug',
-                            'terms' => 'residential',
-                        ),
-                    ),
+                    'orderby' => 'date',
+                    'order' => 'DESC',
                 ));
 
                 if ($residential_products->have_posts()) :
