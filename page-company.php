@@ -25,28 +25,28 @@ get_header();
             <h2 class="section-title">企業理念</h2>
             <div class="philosophy-content">
                 <div class="philosophy-main">
-                    <h3>持続可能な社会の実現に貢献する</h3>
+                    <h3>エネルギーの自立と安定供給を実現する</h3>
                     <p>
-                        私たちQilin Electricは、蓄電技術を通じて持続可能な社会の実現に貢献します。
-                        再生可能エネルギーの普及を促進し、すべての人々が安心して暮らせる
-                        エネルギー環境を創造することが私たちの使命です。
+                        私たちQilin Electricは、太陽光発電と蓄電池を組み合わせたオフグリッドシステムを通じて、
+                        災害や停電時でも電力会社の送電網に依存せず、安定した電力供給を実現します。
+                        すべての人々が安心して暮らせるエネルギー環境を創造することが私たちの使命です。
                     </p>
                 </div>
                 <div class="philosophy-values">
                     <div class="value-item">
+                        <span class="value-icon">⚡</span>
+                        <h4>非常時対応</h4>
+                        <p>停電時も照明・冷蔵庫・スマホ充電・通信を確保</p>
+                    </div>
+                    <div class="value-item">
                         <span class="value-icon">🌱</span>
                         <h4>環境への配慮</h4>
-                        <p>CO2削減と環境保護を最優先に考えた製品開発</p>
+                        <p>燃料不要で排気ガスや騒音の心配がないクリーンエネルギー</p>
                     </div>
                     <div class="value-item">
-                        <span class="value-icon">🤝</span>
-                        <h4>お客様第一</h4>
-                        <p>お客様のニーズに寄り添った最適なソリューション提供</p>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-icon">💡</span>
-                        <h4>技術革新</h4>
-                        <p>常に最新技術を追求し、より良い製品を開発</p>
+                        <span class="value-icon">💰</span>
+                        <h4>経済効果</h4>
+                        <p>電気代削減と災害対策を同時に実現</p>
                     </div>
                 </div>
             </div>
@@ -59,26 +59,29 @@ get_header();
             <h2 class="section-title">代表挨拶</h2>
             <div class="message-content">
                 <div class="message-text">
-                    <h3>持続可能なエネルギー社会の実現を目指して</h3>
+                    <h3>停電時も安心！オフグリッドシステムで実現する安全な暮らし</h3>
                     <p>
-                        2011年の東日本大震災をきっかけに、日本のエネルギー政策は大きな転換期を迎えました。
-                        再生可能エネルギーの重要性が高まる中、私たちは蓄電技術こそが
-                        持続可能なエネルギー社会を実現する鍵だと確信し、この事業を始めました。
+                        近年、台風や地震などの自然災害が増加し、停電のリスクが高まっています。
+                        電力会社の送電網に依存した生活では、災害時に照明、冷蔵庫、スマートフォンの充電、
+                        インターネット通信など、生活に必要な電力が失われてしまいます。
                     </p>
                     <p>
-                        太陽光発電で作られたクリーンなエネルギーを無駄なく活用するためには、
-                        蓄電池が不可欠です。昼間に発電した電気を蓄え、夜間や停電時に使用することで、
-                        エネルギーの自給自足が可能になります。
+                        私たちキリン電気は、太陽光発電と蓄電池を組み合わせたオフグリッドシステムを通じて、
+                        災害や停電時でも電力会社に依存せず、安定した電力供給を実現します。
+                        ガソリン発電機と異なり、燃料が不要で静かで安全、排気ガスや騒音の心配もありません。
                     </p>
                     <p>
-                        私たちは、これまで1,200件以上の蓄電システムを導入してきました。
-                        お客様一人ひとりのライフスタイルやビジネスに最適なシステムを提案し、
-                        導入後も長期にわたってサポートすることで、お客様の満足度98%を実現しています。
+                        また、昼間に太陽光で発電した電力を蓄電池に蓄え、夜間の高料金時間帯に活用することで、
+                        普段の電気代を削減しながら、災害対策も同時に行うことができます。
+                        医療機器や通信機器が必要なご家庭にとっても、大きな安心材料となります。
                     </p>
                     <p>
-                        これからも、技術革新を続けながら、より多くの方々に
-                        蓄電システムの価値を届けていきたいと考えています。
-                        持続可能な未来のために、私たちと一緒に行動しませんか。
+                        IT／DX分野で30年の営業経験を持つ私が、電気工事士の資格と豊富な知識を活かし、
+                        お客様一人ひとりのライフスタイルや予算に合わせた最適なシステムをご提案いたします。
+                        千葉県を中心に、関東エリア全域で対応可能です。
+                    </p>
+                    <p>
+                        エネルギーの自立と安心な暮らしを実現するために、ぜひお気軽にご相談ください。
                     </p>
                     <p class="message-signature">
                         代表<br>
@@ -96,7 +99,7 @@ get_header();
             <div class="overview-table">
                 <div class="overview-row">
                     <div class="overview-label">屋号</div>
-                    <div class="overview-value">Qilin Electric（キリン電気）</div>
+                    <div class="overview-value">キリン電気（Qilin Electric）</div>
                 </div>
                 <div class="overview-row">
                     <div class="overview-label">代表者</div>
@@ -117,7 +120,7 @@ get_header();
                     <div class="overview-label">本社所在地</div>
                     <div class="overview-value">
                         千葉県市原市<br>
-                        TEL: 070-2668-7130<br>
+                        TEL: 090-3282-3943<br>
                         Email: info@qilin-electric.com
                     </div>
                 </div>
@@ -156,7 +159,7 @@ get_header();
                     </p>
                     <p class="access-tel">
                         <strong>お問い合わせ</strong><br>
-                        TEL: 070-2668-7130<br>
+                        TEL: 090-3282-3943<br>
                         Email: info@qilin-electric.com<br>
                         LINE公式アカウント: @qilin-electric<br>
                         営業時間: 9:00～18:00（土日祝除く）

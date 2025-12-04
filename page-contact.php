@@ -29,7 +29,7 @@ get_header();
                         <span style="font-size: 50px;">📞</span>
                     </div>
                     <h3>お電話でのお問い合わせ</h3>
-                    <p class="method-number">070-2668-7130</p>
+                    <p class="method-number">090-3282-3943</p>
                     <p class="method-hours">受付時間: 9:00～18:00（土日祝除く）</p>
                     <p class="method-description">
                         お急ぎの方はお電話でお問い合わせください。
@@ -259,7 +259,7 @@ get_header();
                 <h3>事業所</h3>
                 <p>
                     千葉県市原市<br>
-                    TEL: 070-2668-7130<br>
+                    TEL: 090-3282-3943<br>
                     Email: info@qilin-electric.com<br>
                     営業時間: 9:00～18:00（土日祝除く）
                 </p>
