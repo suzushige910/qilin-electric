@@ -253,3 +253,181 @@ function qilin_electric_posted_by() {
         )
     );
 }
+
+/**
+ * カスタム投稿タイプ: 製品（Product）
+ */
+function qilin_electric_register_product_post_type() {
+    $labels = array(
+        'name'               => '製品',
+        'singular_name'      => '製品',
+        'menu_name'          => '製品管理',
+        'add_new'            => '新規追加',
+        'add_new_item'       => '新しい製品を追加',
+        'edit_item'          => '製品を編集',
+        'new_item'           => '新しい製品',
+        'view_item'          => '製品を表示',
+        'search_items'       => '製品を検索',
+        'not_found'          => '製品が見つかりません',
+        'not_found_in_trash' => 'ゴミ箱に製品はありません',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'products' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-products',
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        'show_in_rest'       => true,
+    );
+
+    register_post_type( 'product', $args );
+}
+add_action( 'init', 'qilin_electric_register_product_post_type' );
+
+/**
+ * カスタムタクソノミー: 製品カテゴリ
+ */
+function qilin_electric_register_product_taxonomy() {
+    $labels = array(
+        'name'              => '製品カテゴリ',
+        'singular_name'     => '製品カテゴリ',
+        'search_items'      => '製品カテゴリを検索',
+        'all_items'         => 'すべての製品カテゴリ',
+        'parent_item'       => '親カテゴリ',
+        'parent_item_colon' => '親カテゴリ:',
+        'edit_item'         => '製品カテゴリを編集',
+        'update_item'       => '製品カテゴリを更新',
+        'add_new_item'      => '新しい製品カテゴリを追加',
+        'new_item_name'     => '新しい製品カテゴリ名',
+        'menu_name'         => '製品カテゴリ',
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'product-category' ),
+        'show_in_rest'      => true,
+    );
+
+    register_taxonomy( 'product_category', array( 'product' ), $args );
+}
+add_action( 'init', 'qilin_electric_register_product_taxonomy' );
+
+/**
+ * 製品のカスタムフィールドを追加
+ */
+function qilin_electric_add_product_meta_boxes() {
+    add_meta_box(
+        'product_details',
+        '製品詳細情報',
+        'qilin_electric_product_details_callback',
+        'product',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'qilin_electric_add_product_meta_boxes' );
+
+/**
+ * 製品詳細情報のメタボックス
+ */
+function qilin_electric_product_details_callback( $post ) {
+    wp_nonce_field( 'product_details_nonce', 'product_details_nonce' );
+
+    $capacity = get_post_meta( $post->ID, '_product_capacity', true );
+    $output = get_post_meta( $post->ID, '_product_output', true );
+    $size = get_post_meta( $post->ID, '_product_size', true );
+    $weight = get_post_meta( $post->ID, '_product_weight', true );
+    $price = get_post_meta( $post->ID, '_product_price', true );
+    $tag = get_post_meta( $post->ID, '_product_tag', true );
+    ?>
+
+    <table class="form-table">
+        <tr>
+            <th><label for="product_capacity">容量</label></th>
+            <td><input type="text" id="product_capacity" name="product_capacity" value="<?php echo esc_attr( $capacity ); ?>" class="regular-text" placeholder="例: 5.0kWh"></td>
+        </tr>
+        <tr>
+            <th><label for="product_output">定格出力</label></th>
+            <td><input type="text" id="product_output" name="product_output" value="<?php echo esc_attr( $output ); ?>" class="regular-text" placeholder="例: 2.0kW"></td>
+        </tr>
+        <tr>
+            <th><label for="product_size">サイズ</label></th>
+            <td><input type="text" id="product_size" name="product_size" value="<?php echo esc_attr( $size ); ?>" class="regular-text" placeholder="例: 450×600×120mm"></td>
+        </tr>
+        <tr>
+            <th><label for="product_weight">重量</label></th>
+            <td><input type="text" id="product_weight" name="product_weight" value="<?php echo esc_attr( $weight ); ?>" class="regular-text" placeholder="例: 3.5kg"></td>
+        </tr>
+        <tr>
+            <th><label for="product_price">参考価格</label></th>
+            <td><input type="text" id="product_price" name="product_price" value="<?php echo esc_attr( $price ); ?>" class="regular-text" placeholder="例: ¥980,000〜"></td>
+        </tr>
+        <tr>
+            <th><label for="product_tag">製品タグ</label></th>
+            <td>
+                <select id="product_tag" name="product_tag">
+                    <option value="">選択してください</option>
+                    <option value="おすすめ" <?php selected( $tag, 'おすすめ' ); ?>>おすすめ</option>
+                    <option value="プレミアム" <?php selected( $tag, 'プレミアム' ); ?>>プレミアム</option>
+                    <option value="コンパクト" <?php selected( $tag, 'コンパクト' ); ?>>コンパクト</option>
+                    <option value="産業用" <?php selected( $tag, '産業用' ); ?>>産業用</option>
+                    <option value="大容量" <?php selected( $tag, '大容量' ); ?>>大容量</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <p class="description">製品の詳細情報を入力してください。これらの情報は製品ページに表示されます。</p>
+
+    <?php
+}
+
+/**
+ * 製品詳細情報の保存
+ */
+function qilin_electric_save_product_details( $post_id ) {
+    if ( ! isset( $_POST['product_details_nonce'] ) ) {
+        return;
+    }
+
+    if ( ! wp_verify_nonce( $_POST['product_details_nonce'], 'product_details_nonce' ) ) {
+        return;
+    }
+
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+
+    $fields = array(
+        'product_capacity' => '_product_capacity',
+        'product_output'   => '_product_output',
+        'product_size'     => '_product_size',
+        'product_weight'   => '_product_weight',
+        'product_price'    => '_product_price',
+        'product_tag'      => '_product_tag',
+    );
+
+    foreach ( $fields as $field => $meta_key ) {
+        if ( isset( $_POST[ $field ] ) ) {
+            update_post_meta( $post_id, $meta_key, sanitize_text_field( $_POST[ $field ] ) );
+        }
+    }
+}
+add_action( 'save_post_product', 'qilin_electric_save_product_details' );

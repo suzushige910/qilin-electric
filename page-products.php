@@ -41,71 +41,71 @@ get_header();
 
             <!-- 製品ラインナップ -->
             <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #8BAE66;"></div>
-                    <div class="product-content">
-                        <span class="product-tag">おすすめ</span>
-                        <h3 class="product-name">Qilin Home 5kWh</h3>
-                        <p class="product-spec">
-                            容量: 5.0kWh<br>
-                            定格出力: 2.0kW<br>
-                            サイズ: 450×600×120mm
-                        </p>
-                        <p class="product-description">
-                            コンパクトで設置しやすい家庭用蓄電システム。
-                            一般的な4人家族の1日分の電力をカバーします。
-                        </p>
-                        <div class="product-price">
-                            <span class="price-label">参考価格</span>
-                            <span class="price-value">¥980,000〜</span>
-                        </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
-                    </div>
-                </div>
+                <?php
+                // 家庭用蓄電システムの製品を取得
+                $residential_products = new WP_Query(array(
+                    'post_type' => 'product',
+                    'posts_per_page' => -1,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'product_category',
+                            'field' => 'slug',
+                            'terms' => 'residential',
+                        ),
+                    ),
+                ));
 
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #628141;"></div>
-                    <div class="product-content">
-                        <span class="product-tag premium">プレミアム</span>
-                        <h3 class="product-name">Qilin Home 10kWh</h3>
-                        <p class="product-spec">
-                            容量: 10.0kWh<br>
-                            定格出力: 3.0kW<br>
-                            サイズ: 600×800×150mm
-                        </p>
-                        <p class="product-description">
-                            大容量タイプで長時間のバックアップが可能。
-                            オール電化住宅にも最適です。
-                        </p>
-                        <div class="product-price">
-                            <span class="price-label">参考価格</span>
-                            <span class="price-value">¥1,580,000〜</span>
+                if ($residential_products->have_posts()) :
+                    while ($residential_products->have_posts()) : $residential_products->the_post();
+                        $capacity = get_post_meta(get_the_ID(), '_product_capacity', true);
+                        $output = get_post_meta(get_the_ID(), '_product_output', true);
+                        $size = get_post_meta(get_the_ID(), '_product_size', true);
+                        $weight = get_post_meta(get_the_ID(), '_product_weight', true);
+                        $price = get_post_meta(get_the_ID(), '_product_price', true);
+                        $tag = get_post_meta(get_the_ID(), '_product_tag', true);
+                        $tag_class = '';
+                        if ($tag === 'プレミアム') $tag_class = 'premium';
+                ?>
+                    <div class="product-card">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="product-image">
+                                <?php the_post_thumbnail('medium'); ?>
+                            </div>
+                        <?php else : ?>
+                            <div class="product-image" style="background-color: #8BAE66;"></div>
+                        <?php endif; ?>
+                        <div class="product-content">
+                            <?php if ($tag) : ?>
+                                <span class="product-tag <?php echo esc_attr($tag_class); ?>"><?php echo esc_html($tag); ?></span>
+                            <?php endif; ?>
+                            <h3 class="product-name"><?php the_title(); ?></h3>
+                            <?php if ($capacity || $output || $size || $weight) : ?>
+                                <p class="product-spec">
+                                    <?php if ($capacity) : ?>容量: <?php echo esc_html($capacity); ?><br><?php endif; ?>
+                                    <?php if ($output) : ?>定格出力: <?php echo esc_html($output); ?><br><?php endif; ?>
+                                    <?php if ($size) : ?>サイズ: <?php echo esc_html($size); ?><br><?php endif; ?>
+                                    <?php if ($weight) : ?>重量: <?php echo esc_html($weight); ?><?php endif; ?>
+                                </p>
+                            <?php endif; ?>
+                            <p class="product-description">
+                                <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                            </p>
+                            <?php if ($price) : ?>
+                                <div class="product-price">
+                                    <span class="price-label">参考価格</span>
+                                    <span class="price-value"><?php echo esc_html($price); ?></span>
+                                </div>
+                            <?php endif; ?>
+                            <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
                         </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
                     </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #E67E22;"></div>
-                    <div class="product-content">
-                        <span class="product-tag">コンパクト</span>
-                        <h3 class="product-name">Qilin Home 3kWh</h3>
-                        <p class="product-spec">
-                            容量: 3.0kWh<br>
-                            定格出力: 1.5kW<br>
-                            サイズ: 350×500×100mm
-                        </p>
-                        <p class="product-description">
-                            省スペース設計で、狭小住宅にも設置可能。
-                            初めての蓄電池導入に最適です。
-                        </p>
-                        <div class="product-price">
-                            <span class="price-label">参考価格</span>
-                            <span class="price-value">¥680,000〜</span>
-                        </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
-                    </div>
-                </div>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo '<p>製品が登録されていません。</p>';
+                endif;
+                ?>
             </div>
 
             <!-- 選び方ガイド -->
