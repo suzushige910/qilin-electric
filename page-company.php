@@ -81,8 +81,8 @@ get_header();
                         持続可能な未来のために、私たちと一緒に行動しませんか。
                     </p>
                     <p class="message-signature">
-                        代表取締役社長<br>
-                        <strong style="font-size: 24px; color: #628141;">山田 太郎</strong>
+                        代表<br>
+                        <strong style="font-size: 24px; color: #628141;">鈴木 繁樹</strong>
                     </p>
                 </div>
             </div>
@@ -95,161 +95,50 @@ get_header();
             <h2 class="section-title">会社概要</h2>
             <div class="overview-table">
                 <div class="overview-row">
-                    <div class="overview-label">会社名</div>
-                    <div class="overview-value">株式会社Qilin Electric</div>
-                </div>
-                <div class="overview-row">
-                    <div class="overview-label">設立</div>
-                    <div class="overview-value">2015年4月1日</div>
-                </div>
-                <div class="overview-row">
-                    <div class="overview-label">資本金</div>
-                    <div class="overview-value">5,000万円</div>
+                    <div class="overview-label">屋号</div>
+                    <div class="overview-value">Qilin Electric（キリン電気）</div>
                 </div>
                 <div class="overview-row">
                     <div class="overview-label">代表者</div>
-                    <div class="overview-value">代表取締役社長 山田 太郎</div>
-                </div>
-                <div class="overview-row">
-                    <div class="overview-label">従業員数</div>
-                    <div class="overview-value">120名（2024年12月現在）</div>
+                    <div class="overview-value">鈴木 繁樹</div>
                 </div>
                 <div class="overview-row">
                     <div class="overview-label">事業内容</div>
                     <div class="overview-value">
-                        ・家庭用・産業用蓄電システムの販売・施工<br>
                         ・太陽光発電システムの販売・施工<br>
-                        ・エネルギーマネジメントシステムの開発・販売<br>
+                        ・家庭用・産業用蓄電システムの販売・施工<br>
+                        ・電気工事全般<br>
+                        ・ポータブル電源の販売<br>
+                        ・BCP対策（UPS等）<br>
                         ・省エネルギーコンサルティング
                     </div>
                 </div>
                 <div class="overview-row">
                     <div class="overview-label">本社所在地</div>
                     <div class="overview-value">
-                        〒100-0001<br>
-                        東京都千代田区千代田1-1-1<br>
-                        TEL: 03-1234-5678<br>
-                        FAX: 03-1234-5679
+                        千葉県市原市<br>
+                        TEL: 070-2668-7130<br>
+                        Email: info@qilin-electric.com
                     </div>
                 </div>
                 <div class="overview-row">
-                    <div class="overview-label">営業所</div>
+                    <div class="overview-label">保有資格</div>
                     <div class="overview-value">
-                        札幌営業所、仙台営業所、名古屋営業所、大阪営業所、<br>
-                        広島営業所、福岡営業所
+                        ・第二種電気工事士（千葉県第97276号）<br>
+                        ・第一種電気工事士（実務経験中）<br>
+                        ・認定電気工事従事者（関東東北産業保安監督部第78289号）<br>
+                        ・低圧電気取扱い等業務特別教育修了<br>
+                        ・フォークリフト技能講習修了<br>
+                        ・初級システムアドミニストレータ
                     </div>
                 </div>
                 <div class="overview-row">
-                    <div class="overview-label">取引銀行</div>
+                    <div class="overview-label">経歴</div>
                     <div class="overview-value">
-                        三菱UFJ銀行 本店<br>
-                        みずほ銀行 丸の内支店
+                        IT／DX 30年の営業経験を持つ代表が、<br>
+                        エネルギー分野での豊富な知識と経験を活かし、<br>
+                        お客様に最適なソリューションを提供いたします。
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 会社沿革 -->
-    <section class="history-section bg-light">
-        <div class="container">
-            <h2 class="section-title">会社沿革</h2>
-            <div class="history-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2015年</div>
-                    <div class="timeline-content">
-                        <h4>会社設立</h4>
-                        <p>東京都千代田区に株式会社Qilin Electricを設立</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2016年</div>
-                    <div class="timeline-content">
-                        <h4>事業拡大</h4>
-                        <p>大阪営業所を開設。家庭用蓄電システムの販売開始</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2017年</div>
-                    <div class="timeline-content">
-                        <h4>製品ラインナップ拡充</h4>
-                        <p>産業用大容量蓄電システムの取り扱い開始</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2018年</div>
-                    <div class="timeline-content">
-                        <h4>累計導入500件達成</h4>
-                        <p>札幌、名古屋、福岡に営業所を開設</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2019年</div>
-                    <div class="timeline-content">
-                        <h4>卒FIT対策事業強化</h4>
-                        <p>FIT終了に伴う蓄電池需要に対応したサービス展開</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2020年</div>
-                    <div class="timeline-content">
-                        <h4>オンラインサービス開始</h4>
-                        <p>遠隔監視・診断サービスの提供開始</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2021年</div>
-                    <div class="timeline-content">
-                        <h4>累計導入1,000件達成</h4>
-                        <p>仙台、広島に営業所を開設し、全国展開を完了</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2022年</div>
-                    <div class="timeline-content">
-                        <h4>環境貢献活動</h4>
-                        <p>CO2削減量累計10,000トンを達成</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2024年</div>
-                    <div class="timeline-content">
-                        <h4>事業拡大</h4>
-                        <p>累計導入1,200件突破。お客様満足度98%を達成</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 取得資格・認証 -->
-    <section class="certifications-section">
-        <div class="container">
-            <h2 class="section-title">取得資格・認証</h2>
-            <div class="certifications-grid">
-                <div class="cert-item">
-                    <h4>電気工事業登録</h4>
-                    <p>東京都知事許可（般-○）第○○○○○号</p>
-                </div>
-                <div class="cert-item">
-                    <h4>建設業許可</h4>
-                    <p>国土交通大臣許可（般-○）第○○○○○号</p>
-                </div>
-                <div class="cert-item">
-                    <h4>ISO 9001認証</h4>
-                    <p>品質マネジメントシステム</p>
-                </div>
-                <div class="cert-item">
-                    <h4>ISO 14001認証</h4>
-                    <p>環境マネジメントシステム</p>
-                </div>
-                <div class="cert-item">
-                    <h4>第一種電気工事士</h4>
-                    <p>在籍技術者50名</p>
-                </div>
-                <div class="cert-item">
-                    <h4>エネルギー管理士</h4>
-                    <p>在籍技術者10名</p>
                 </div>
             </div>
         </div>
@@ -261,27 +150,25 @@ get_header();
             <h2 class="section-title">アクセス</h2>
             <div class="access-content">
                 <div class="access-info">
-                    <h3>本社</h3>
+                    <h3>事業所</h3>
                     <p class="access-address">
-                        〒100-0001<br>
-                        東京都千代田区千代田1-1-1<br>
-                        Qilinビル 5F
-                    </p>
-                    <p class="access-route">
-                        <strong>電車でお越しの場合</strong><br>
-                        JR「東京駅」より徒歩5分<br>
-                        東京メトロ丸ノ内線「大手町駅」より徒歩3分
+                        千葉県市原市
                     </p>
                     <p class="access-tel">
                         <strong>お問い合わせ</strong><br>
-                        TEL: 03-1234-5678（代表）<br>
-                        FAX: 03-1234-5679<br>
+                        TEL: 070-2668-7130<br>
+                        Email: info@qilin-electric.com<br>
+                        LINE公式アカウント: @qilin-electric<br>
                         営業時間: 9:00～18:00（土日祝除く）
+                    </p>
+                    <p class="access-note">
+                        ※詳細な住所は、お問い合わせいただいた際にご案内いたします。<br>
+                        ※千葉県を中心に、関東エリア全域に対応しております。
                     </p>
                 </div>
                 <div class="access-map">
                     <div style="background-color: #8BAE66; height: 400px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
-                        <p style="color: #fff; font-size: 18px;">Google Map</p>
+                        <p style="color: #fff; font-size: 18px;">千葉県市原市</p>
                     </div>
                 </div>
             </div>

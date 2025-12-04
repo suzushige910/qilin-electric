@@ -29,11 +29,11 @@ get_header();
                         <span style="font-size: 50px;">📞</span>
                     </div>
                     <h3>お電話でのお問い合わせ</h3>
-                    <p class="method-number">03-1234-5678</p>
+                    <p class="method-number">070-2668-7130</p>
                     <p class="method-hours">受付時間: 9:00～18:00（土日祝除く）</p>
                     <p class="method-description">
                         お急ぎの方はお電話でお問い合わせください。
-                        専門スタッフが丁寧に対応いたします。
+                        代表が丁寧に対応いたします。
                     </p>
                 </div>
 
@@ -243,9 +243,8 @@ get_header();
                 <div class="faq-item">
                     <h3 class="faq-question">Q. 対応エリアはどこですか?</h3>
                     <p class="faq-answer">
-                        A. 全国47都道府県に対応しております。
-                        札幌、仙台、東京、名古屋、大阪、広島、福岡に営業所があり、
-                        各地域のお客様に迅速に対応できる体制を整えています。
+                        A. 千葉県を中心に、関東エリア全域に対応しております。
+                        その他のエリアにつきましても、お気軽にご相談ください。
                     </p>
                 </div>
             </div>
@@ -257,10 +256,11 @@ get_header();
         <div class="container">
             <h2 class="section-title">アクセス</h2>
             <div class="access-info-compact">
-                <h3>本社</h3>
+                <h3>事業所</h3>
                 <p>
-                    〒100-0001 東京都千代田区千代田1-1-1 Qilinビル 5F<br>
-                    TEL: 03-1234-5678 / FAX: 03-1234-5679<br>
+                    千葉県市原市<br>
+                    TEL: 070-2668-7130<br>
+                    Email: info@qilin-electric.com<br>
                     営業時間: 9:00～18:00（土日祝除く）
                 </p>
                 <a href="/company/#access" class="btn btn-outline-primary">詳しいアクセス情報</a>
