@@ -330,7 +330,7 @@ get_header();
                 <h2 style="color: #628141;">あなたも蓄電池で快適な暮らしを</h2>
                 <p style="color: #666;">まずは無料相談・お見積りから始めませんか？</p>
                 <div class="cta-buttons">
-                    <a href="/contact/" class="btn btn-primary">無料相談・お見積り</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">無料相談・お見積り</a>
                     <a href="/products/" class="btn btn-outline-primary">製品一覧を見る</a>
                 </div>
             </div>

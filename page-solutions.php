@@ -63,7 +63,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <a href="/contact/" class="btn btn-primary">詳しく相談する</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">詳しく相談する</a>
                 </div>
 
                 <!-- BCP・防災対策 -->
@@ -113,7 +113,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <a href="/contact/" class="btn btn-primary">BCP対策を相談する</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">BCP対策を相談する</a>
                 </div>
 
                 <!-- オフグリッドシステム -->
@@ -169,7 +169,7 @@ get_header();
                             1年中安定して稼働。電力コストゼロを実現しました。
                         </p>
                     </div>
-                    <a href="/contact/" class="btn btn-primary">オフグリッドを相談する</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">オフグリッドを相談する</a>
                 </div>
 
                 <!-- 太陽光発電連携 -->
@@ -230,7 +230,7 @@ get_header();
                             </tr>
                         </table>
                     </div>
-                    <a href="/contact/" class="btn btn-primary">太陽光連携を相談する</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">太陽光連携を相談する</a>
                 </div>
 
             </div>
@@ -244,7 +244,7 @@ get_header();
                 <h2 style="color: #EBD5AB;">最適なソリューションをご提案します</h2>
                 <p style="color: #EBD5AB;">お客様の課題やご要望に合わせて、最適な蓄電システムをご提案いたします</p>
                 <div class="cta-buttons">
-                    <a href="/contact/" class="btn btn-light">無料相談はこちら</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-light">無料相談はこちら</a>
                     <a href="/case-studies/" class="btn btn-outline-light">導入事例を見る</a>
                 </div>
             </div>

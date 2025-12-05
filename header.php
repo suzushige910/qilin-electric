@@ -48,6 +48,14 @@
                     ?>
                 </div>
 
+                <div class="header-actions">
+                    <div class="header-phone">
+                        <span class="phone-icon">📞</span>
+                        <a href="tel:090-3282-3943" class="phone-number">090-3282-3943</a>
+                    </div>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-header-contact">お問い合わせ</a>
+                </div>
+
                 <nav id="site-navigation" class="main-navigation">
                     <?php
                     wp_nav_menu(

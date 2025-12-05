@@ -185,7 +185,7 @@ get_header();
                 <h2 style="color: #EBD5AB;">お気軽にお問い合わせください</h2>
                 <p style="color: #EBD5AB;">蓄電システムに関するご相談、お見積りは無料です</p>
                 <div class="cta-buttons">
-                    <a href="/contact/" class="btn btn-light">お問い合わせ</a>
+                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-light">お問い合わせ</a>
                     <a href="/products/" class="btn btn-outline-light">製品一覧</a>
                 </div>
             </div>
