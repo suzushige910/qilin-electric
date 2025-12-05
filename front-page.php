@@ -20,7 +20,7 @@ get_header();
                         <p class="hero-subtitle">家庭用・産業用蓄電システムで、持続可能な暮らしを実現</p>
                         <div class="hero-buttons">
                             <a href="/products/" class="btn btn-primary">製品を見る</a>
-                            <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-secondary">お問い合わせ</a>
+                            <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-secondary">公式LINEで相談</a>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@ get_header();
                 <h2 style="color: #EBD5AB;">まずはお気軽にご相談ください</h2>
                 <p style="color: #EBD5AB;">専門スタッフが、お客様のニーズに最適な蓄電システムをご提案いたします</p>
                 <div class="cta-buttons">
-                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-light">お問い合わせ</a>
+                    <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-light">公式LINEで相談</a>
                     <a href="tel:0120-xxx-xxxx" class="btn btn-outline-light">📞 0120-XXX-XXXX</a>
                 </div>
             </div>

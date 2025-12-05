@@ -129,6 +129,14 @@ a:hover {
     color: #fff;
 }
 
+.btn-header-contact.btn-line {
+    background-color: #06C755;
+}
+
+.btn-header-contact.btn-line:hover {
+    background-color: #05A946;
+}
+
 /* ナビゲーション */
 .main-navigation {
     margin-top: 20px;

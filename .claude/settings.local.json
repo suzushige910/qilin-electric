@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(find . -name \"*.php\" -type f \\( -name \"front-page.php\" -o -name \"page-*.php\" \\) -exec sed -i 's|href=\"\"http://qilin-electric.com/script/mailform/main/\"\"|href=\"\"https://lin.ee/kJdicywN\"\" target=\"\"_blank\"\"|g' {} ;)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

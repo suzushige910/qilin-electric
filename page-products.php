@@ -91,7 +91,7 @@ get_header();
                                     <span class="price-value"><?php echo esc_html($price); ?></span>
                                 </div>
                             <?php endif; ?>
-                            <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">お問い合わせ</a>
+                            <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                         </div>
                     </div>
                 <?php
@@ -155,7 +155,7 @@ get_header();
                             <span class="price-label">参考価格</span>
                             <span class="price-value">¥5,800,000〜</span>
                         </div>
-                        <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">お見積り依頼</a>
+                        <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                     </div>
                 </div>
 
@@ -177,7 +177,7 @@ get_header();
                             <span class="price-label">参考価格</span>
                             <span class="price-value">¥9,800,000〜</span>
                         </div>
-                        <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-primary">お見積り依頼</a>
+                        <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@ get_header();
                             <span class="price-label">参考価格</span>
                             <span class="price-value">¥39,800</span>
                         </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
+                        <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                     </div>
                 </div>
 
@@ -259,7 +259,7 @@ get_header();
                             <span class="price-label">参考価格</span>
                             <span class="price-value">¥128,000</span>
                         </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
+                        <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                     </div>
                 </div>
 
@@ -281,7 +281,7 @@ get_header();
                             <span class="price-label">参考価格</span>
                             <span class="price-value">¥228,000</span>
                         </div>
-                        <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
+                        <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-primary">公式LINEで相談</a>
                     </div>
                 </div>
             </div>
@@ -317,7 +317,7 @@ get_header();
                 <h2 style="color: #EBD5AB;">製品についてのご相談・お見積り</h2>
                 <p style="color: #EBD5AB;">お客様のニーズに合わせた最適な蓄電システムをご提案いたします</p>
                 <div class="cta-buttons">
-                    <a href="http://qilin-electric.com/script/mailform/main/" class="btn btn-light">お問い合わせ</a>
+                    <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-light">公式LINEで相談</a>
                     <a href="/downloads/" class="btn btn-outline-light">カタログダウンロード</a>
                 </div>
             </div>
