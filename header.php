@@ -48,14 +48,6 @@
                     ?>
                 </div>
 
-                <div class="header-actions">
-                    <div class="header-phone">
-                        <span class="phone-icon">📞</span>
-                        <a href="tel:0120-000-000" class="phone-number">0120-000-000</a>
-                    </div>
-                    <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-header-contact btn-line">公式LINE</a>
-                </div>
-
                 <nav id="site-navigation" class="main-navigation">
                     <?php
                     wp_nav_menu(
