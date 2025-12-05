@@ -201,9 +201,8 @@ get_header();
             <div class="cta-content">
                 <h2 style="color: #EBD5AB;">まずはお気軽にご相談ください</h2>
                 <p style="color: #EBD5AB;">専門スタッフが、お客様のニーズに最適な蓄電システムをご提案いたします</p>
-                <div class="cta-buttons">
+                <div class="cta-buttons" style="justify-content: center;">
                     <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-light">公式LINEで相談</a>
-                    <a href="tel:0120-xxx-xxxx" class="btn btn-outline-light">📞 0120-XXX-XXXX</a>
                 </div>
             </div>
         </div>

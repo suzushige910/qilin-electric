@@ -48,6 +48,10 @@
                     ?>
                 </div>
 
+                <div class="header-line-btn">
+                    <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-line-header">公式LINE</a>
+                </div>
+
                 <nav id="site-navigation" class="main-navigation">
                     <?php
                     wp_nav_menu(
