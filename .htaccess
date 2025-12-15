@@ -1,0 +1,14 @@
+# リダイレクト設定
+# サイト完成後は以下の行をコメントアウト（先頭に#を付ける）してください
+
+# 全てのアクセスをgx-smartlife.comにリダイレクト
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?qilin-electric\.com$ [NC]
+RewriteRule ^(.*)$ https://gx-smartlife.com/$1 [R=302,L]
+
+# サイト完成後のリダイレクト解除方法:
+# 上記3行（RewriteEngine On から RewriteRule まで）の先頭に # を付けてコメントアウトしてください
+# 例:
+# # RewriteEngine On
+# # RewriteCond %{HTTP_HOST} ^(www\.)?qilin-electric\.com$ [NC]
+# # RewriteRule ^(.*)$ https://gx-smartlife.com/$1 [R=302,L]
