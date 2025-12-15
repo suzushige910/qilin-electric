@@ -72,9 +72,11 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
     margin-bottom: 15px;
+}
+
+.site-identity {
+    flex: 0 0 auto;
 }
 
 .site-title {
@@ -144,8 +146,7 @@ a:hover {
 
 /* ヘッダーLINEボタン */
 .header-line-btn {
-    display: flex;
-    align-items: center;
+    flex: 0 0 auto;
 }
 
 .btn-line-header {
@@ -155,6 +156,7 @@ a:hover {
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-line-header:hover {
@@ -165,20 +167,23 @@ a:hover {
 /* ナビゲーション */
 .main-navigation {
     margin: 0;
+    width: 100%;
 }
 
 .main-navigation ul {
-    list-style: none;
-    display: flex;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap;
     gap: 0;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .main-navigation li {
-    margin: 0;
+    margin: 0 !important;
     position: relative;
+    display: inline-block !important;
 }
 
 .main-navigation a {
