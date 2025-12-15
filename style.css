@@ -168,6 +168,8 @@ a:hover {
 .main-navigation {
     margin: 0;
     width: 100%;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 5px;
 }
 
 .main-navigation > div > ul,
@@ -177,9 +179,11 @@ a:hover {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    gap: 0 !important;
+    gap: 5px !important;
     margin: 0 !important;
     padding: 0 !important;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .main-navigation > div > ul > li,
@@ -190,6 +194,7 @@ a:hover {
     position: relative;
     display: inline-block !important;
     float: none !important;
+    flex-shrink: 0;
 }
 
 .main-navigation a {
@@ -199,11 +204,15 @@ a:hover {
     display: block !important;
     transition: all 0.3s ease;
     text-decoration: none;
+    border-radius: 5px;
+    white-space: nowrap;
 }
 
 .main-navigation a:hover {
     color: #fff !important;
     background-color: #628141 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(98, 129, 65, 0.3);
 }
 
 /* サブメニュー（プルダウン） */
@@ -211,44 +220,69 @@ a:hover {
 .main-navigation .sub-menu {
     display: none !important;
     position: absolute !important;
-    top: 100% !important;
+    top: calc(100% + 5px) !important;
     left: 0 !important;
     background-color: #fff !important;
     border: 1px solid #e0e0e0 !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    min-width: 200px !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+    min-width: 220px !important;
     z-index: 9999 !important;
     flex-direction: column !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 8px 0 !important;
 }
 
 .main-navigation li:hover > ul,
 .main-navigation li:hover > .sub-menu {
     display: flex !important;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .main-navigation ul ul li,
 .main-navigation .sub-menu li {
     width: 100% !important;
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .main-navigation ul ul a,
 .main-navigation .sub-menu a {
-    padding: 10px 15px !important;
-    border-bottom: 1px solid #f0f0f0 !important;
+    padding: 12px 20px !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    white-space: nowrap;
 }
 
 .main-navigation ul ul a:hover,
 .main-navigation .sub-menu a:hover {
     background-color: #8BAE66 !important;
     color: #fff !important;
+    padding-left: 25px !important;
+    transition: all 0.3s ease;
 }
 
 /* サブメニューのサブメニュー */
 .main-navigation ul ul ul,
 .main-navigation .sub-menu .sub-menu {
     left: 100% !important;
-    top: 0 !important;
+    top: -8px !important;
+    margin-left: 5px !important;
 }
 
 /* ========================================
