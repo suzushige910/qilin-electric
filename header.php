@@ -24,7 +24,7 @@
 
     <header id="masthead" class="site-header">
         <div class="container">
-            <div class="site-branding">
+            <div class="header-top">
                 <div class="site-identity">
                     <?php
                     if ( has_custom_logo() ) :
@@ -51,19 +51,19 @@
                 <div class="header-line-btn">
                     <a href="https://lin.ee/kJdicywN" target="_blank" class="btn btn-line-header">公式LINE</a>
                 </div>
-
-                <nav id="site-navigation" class="main-navigation">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'primary',
-                            'menu_id'        => 'primary-menu',
-                            'container'      => false,
-                            'fallback_cb'    => false,
-                        )
-                    );
-                    ?>
-                </nav>
             </div>
+
+            <nav id="site-navigation" class="main-navigation">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    )
+                );
+                ?>
+            </nav>
         </div>
     </header>
